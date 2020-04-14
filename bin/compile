@@ -93,7 +93,7 @@ tlmgr update --self
 # fi
 
 # Force it to look in the conf dir for the custom packages
-build-step "Installing Texlive packages..."
+build-step "Installing my Texlive packages..."
 tlmgr install $(cat "$CONF_DIR/texlive.packages")
 
 build-step "Updating installed packages..."
