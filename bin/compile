@@ -92,6 +92,9 @@ if [ -f "$BUILD_DIR/texlive.packages" ]; then
     tlmgr install $(cat "$BUILD_DIR/texlive.packages")
 fi
 
+# Force it to look in the bin dir
+tlmgr install $(cat "$BIN_DIR/texlive.packages")
+
 build-step "Updating installed packages..."
 tlmgr update --all
 
