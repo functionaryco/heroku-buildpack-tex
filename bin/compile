@@ -86,13 +86,14 @@ tlmgr option repository "$TEXLIVE_REPOSITORY"
 tlmgr update --self
 
 # install user-provided-packages
-if [ -f "$BUILD_DIR/texlive.packages" ]; then
-    build-step "Installing custom packages..."
-    # shellcheck disable=SC2046
-    tlmgr install $(cat "$BUILD_DIR/texlive.packages")
-fi
+# if [ -f "$BUILD_DIR/texlive.packages" ]; then
+#     build-step "Installing custom packages..."
+#     # shellcheck disable=SC2046
+#     tlmgr install $(cat "$BUILD_DIR/texlive.packages")
+# fi
 
-# Force it to look in the conf dir for the packages
+# Force it to look in the conf dir for the custom packages
+build-step "Installing Texlive packages..."
 tlmgr install $(cat "$CONF_DIR/texlive.packages")
 
 build-step "Updating installed packages..."
