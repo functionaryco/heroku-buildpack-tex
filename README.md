@@ -23,7 +23,7 @@ docker run -ti -v path/to/my/tex/files:/app heroku-tex
 ### Setup
 
 ```shell
-heroku buildpacks:add git://github.com/Thermondo/heroku-buildpack-tex.git#VERSION_NUMBER
+heroku buildpacks:add git://github.com/functionaryco/heroku-buildpack-tex.git#VERSION_NUMBER
 ```
 
 ### How does it work?
